@@ -1,0 +1,42 @@
+{
+  "name": "event-exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "node -e \"if (parseInt(process.versions.node) < 20) throw new Error('Node.js 20+ is required')\"",
+    "dev": "vite",
+    "build": "npm run lint && vite build",
+    "watch": "concurrently -k \"vite build --watch\" \"chokidar 'assets/js/**/*.js' -c 'npm run lint:js'\" \"chokidar 'assets/css/**/*.css' -c 'npm run lint:css'\" \"chokidar '**/*.php' -c 'npm run phpcs'\"",
+    "lint": "npm run lint:js && npm run lint:css && npm run phpcs",
+    "lint:js": "eslint assets/js",
+    "lint:css": "stylelint 'assets/css/**/*.css'",
+    "phpcs": "vendor/bin/phpcs",
+    "format:php": "vendor/bin/phpcbf --standard=WordPress .",
+    "format": "prettier --write assets/js/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [],
+  "author": "Syrah Arguilles",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/css": "^0.7.0",
+    "@eslint/js": "^9.25.1",
+    "@tailwindcss/postcss": "^4.1.4",
+    "autoprefixer": "^10.4.21",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.25.1",
+    "globals": "^16.0.0",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.19.1",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-config-tailwindcss": "^1.0.0",
+    "tailwindcss": "^4.1.4",
+    "vite": "^6.3.4"
+  }
+}
