@@ -33,7 +33,7 @@ jobs:
           docker compose down
           docker compose up -d --build
 
-    - name: 🧱 Build assets (theme + blocks)
+    - name: Build assets (theme + blocks)
       run: |
         cd wp-content/themes/proevent
         npm ci
