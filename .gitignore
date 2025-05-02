@@ -1,0 +1,43 @@
+# Ignore Node dependencies
+node_modules/
+
+# Ignore Composer dependencies
+vendor/
+
+# Build output
+/dist/
+/build/
+*.asset.php
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# WordPress specific
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/cache/
+wp-content/backups/
+wp-content/wflogs/
+
+# Environment & IDE settings
+.idea/
+.vscode/
+
+# Ignore local database exports
+*.sql
+*.sql.gz
+
+# Plugin-specific
+plugins/event-grid-block/build/
+plugins/event-grid-block/node_modules/
+
+# Theme-specific
+wp-content/themes/proevent/dist/
+wp-content/themes/proevent/node_modules/
+wp-content/themes/proevent/*.zip
