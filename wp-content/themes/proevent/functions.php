@@ -4,10 +4,33 @@
  */
 
 require_once get_template_directory() . '/inc/api.php';
+require_once get_template_directory() . '/blocks/hero-cta/render.php';
 
 add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css' );
 });
+
+if ( ! is_admin() ) {
+    add_action( 'wp_enqueue_scripts', 'enqueue_theme_assets' );
+}
+
+function enqueue_theme_assets() {
+    wp_enqueue_style(
+        'theme-style',
+        get_template_directory_uri() . '/dist/css/bundle.css',
+        [],
+        filemtime( get_template_directory() . '/dist/css/bundle.css' )
+    );
+
+    wp_enqueue_script(
+        'theme-script',
+        get_template_directory_uri() . '/dist/js/bundle.js',
+        [],
+        filemtime( get_template_directory() . '/dist/js/bundle.js' ),
+        true
+    );
+}
+
 
 // =============================
 // THEME SETUP
@@ -148,8 +171,6 @@ register_taxonomy('event-category', 'event', [
     'hierarchical' => true,
 ]);
 
-require_once get_template_directory() . '/blocks/hero-cta/render.php';
-
 add_action( 'init', function() {
 	register_block_type( __DIR__ . '/blocks/hero-cta' );
 });
@@ -160,24 +181,3 @@ add_action( 'init', function() {
 	$custom = array_filter( array_keys( $all ), fn( $key ) => ! str_starts_with( $key, 'core/' ) );
 	error_log( '✅ Custom blocks: ' . print_r( $custom, true ) );
 });
-
-if ( ! is_admin() ) {
-    add_action( 'wp_enqueue_scripts', 'enqueue_theme_assets' );
-}
-
-function enqueue_theme_assets() {
-    wp_enqueue_style(
-        'theme-style',
-        get_template_directory_uri() . '/dist/css/bundle.css',
-        [],
-        filemtime( get_template_directory() . '/dist/css/bundle.css' )
-    );
-
-    wp_enqueue_script(
-        'theme-script',
-        get_template_directory_uri() . '/dist/js/bundle.js',
-        [],
-        filemtime( get_template_directory() . '/dist/js/bundle.js' ),
-        true
-    );
-}

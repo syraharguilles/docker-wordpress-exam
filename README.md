@@ -33,8 +33,10 @@ wp-content/
 │ ├── blocks/
 │ │ └── hero-cta/ # Gutenberg block (Hero)
 │ ├── inc/ # Custom PHP (API, helpers)
-│ ├── templates/ # Layout templates
+│ ├── header.php # Header of the page(s)
+│ ├── footer.php # Footer of the page(s)
 │ ├── front-page.php # Event archive
+│ ├── page.php # All page(s)
 │ ├── single-event.php # Single event layout
 │ ├── functions.php # Theme setup, CPTs, meta, blocks
 │ └── style.css
@@ -42,7 +44,6 @@ wp-content/
 │ └── event-grid-block/
 │ ├── src/
 │ ├── assets/
-│ ├── build/
 │ ├── block.json
 │ ├── event-grid.php
 │ └── php/
