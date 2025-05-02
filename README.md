@@ -58,6 +58,7 @@ clone https://github.com/syraharguilles/docker-wordpress-exam.git
 docker compose up -d
 ```
 ### 2. Install Dependencies
+####  Install Theme
 From the theme directory:
 ```bash
 cd wp-content/themes/proevent
@@ -65,20 +66,38 @@ npm install
 composer install
 ```
 
-# Build Tailwind + JS for theme
+#### Build Tailwind + JS for theme
 ```bash
 npm run build:theme
 ```
 
-# Build Gutenberg blocks (hero CTA)
+#### Build Gutenberg blocks (hero CTA)
 ```bash
 npm run build:hero
 ```
 
-# Watch for changes
+#### Watch for changes
 ```bash
 npm run watch:all
 ```
+
+####  Install Plugin
+From the theme directory:
+```bash
+cd wp-content/plugins/event-grid-block
+npm install
+```
+
+#### Build Gutenberg blocks (Event Grid)
+```bash
+npm run build
+```
+
+#### Start Gutenberg blocks (Event Grid)
+```bash
+npm run start
+```
+
 ## **Gutenberg Blocks**
 - Hero CTA Block (in theme)
  - JSX source: blocks/hero-cta/src/
