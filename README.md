@@ -9,6 +9,7 @@ A modern WordPress project using Tailwind CSS v4, custom Gutenberg blocks, and d
   - Event Grid block (custom query for event CPT)
 - Custom Post Type: `event`
 - Custom Taxonomy: `event-category`
+- Custom REST API: `/wp-json/proevent/v1/next?category=[category-name]`
 - Custom meta fields: date, time, location, registration link
 - Admin Settings page: company logo, brand color, social links
 - SEO-friendly slugs: `/events`, `/event-category/...`
