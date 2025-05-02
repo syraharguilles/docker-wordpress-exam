@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ruleset name="ProEvent Theme Rules">
+  <description>Balanced WordPress Coding Standards for the ProEvent Theme</description>
+
+  <!-- Use WordPress-Extra as the base -->
+  <rule ref="WordPress-Extra">
+    <!-- Relax tab/space strictness -->
+    <exclude name="Generic.WhiteSpace.DisallowTabIndent" />
+    <exclude name="Generic.WhiteSpace.DisallowSpaceIndent" />
+
+    <!-- Relax newline after brace -->
+    <exclude name="Squiz.WhiteSpace.ScopeOpeningBrace.BraceOnNewLine" />
+    <exclude name="Squiz.WhiteSpace.ScopeOpeningBrace.ContentAfterBrace" />
+
+    <!-- Relax brace indentation spacing -->
+    <exclude name="Squiz.WhiteSpace.ScopeClosingBrace.Indent" />
+    <exclude name="PEAR.WhiteSpace.ScopeClosingBrace" />
+
+    <!-- Keep spacing cleanup -->
+    <!-- You can optionally exclude these if you want -->
+    <!-- <exclude name="Squiz.WhiteSpace.SuperfluousWhitespace" /> -->
+    <!-- <exclude name="Squiz.WhiteSpace.SemicolonSpacing" /> -->
+  </rule>
+
+  <!-- Exclude folders/files you don't want linted -->
+  <exclude-pattern>assets/*</exclude-pattern>
+  <exclude-pattern>node_modules/*</exclude-pattern>
+  <exclude-pattern>vendor/*</exclude-pattern>
+  <exclude-pattern>dist/*</exclude-pattern>
+  <exclude-pattern>*.js</exclude-pattern>
+  <exclude-pattern>*.css</exclude-pattern>
+  <exclude-pattern>*.json</exclude-pattern>
+  <exclude-pattern>*.config.js</exclude-pattern>
+
+  <!-- Apply to all PHP files in theme -->
+  <file>.</file>
+</ruleset>

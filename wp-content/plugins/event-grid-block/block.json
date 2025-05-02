@@ -1,0 +1,33 @@
+{
+    "apiVersion": 3,
+    "name": "proevent/event-grid",
+    "title": "Event Grid",
+    "category": "widgets",
+    "icon": "grid-view",
+    "description": "Displays a grid of events with limit, category, and sorting options.",
+    "keywords": ["events", "grid", "custom post type"],
+    "textdomain": "proevent",
+    "supports": {
+      "html": false
+    },
+    "attributes": {
+      "limit": {
+        "type": "number",
+        "default": 6
+      },
+      "category": {
+        "type": "string",
+        "default": ""
+      },
+      "order": {
+        "type": "string",
+        "default": "ASC"
+      },
+      "orderby": {
+        "type": "string",
+        "default": "meta_value"
+      }
+    },
+    "editorScript": "file:./build/index.js"
+  }
+  

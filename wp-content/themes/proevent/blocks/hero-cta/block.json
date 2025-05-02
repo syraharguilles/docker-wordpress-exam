@@ -1,0 +1,33 @@
+{
+    "apiVersion": 3,
+    "name": "proevent/hero-cta",
+    "title": "Hero with CTA",
+    "category": "design",
+    "icon": "megaphone",
+    "description": "A hero section with background image, heading, and call-to-action button.",
+    "textdomain": "proevent",
+    "supports": {
+      "html": false
+    },
+    "attributes": {
+      "imageUrl": {
+        "type": "string",
+        "default": ""
+      },
+      "heading": {
+        "type": "string",
+        "default": "Join Our Event"
+      },
+      "buttonText": {
+        "type": "string",
+        "default": "Learn More"
+      },
+      "buttonUrl": {
+        "type": "string",
+        "default": "#"
+      }
+    },
+    "editorScript": "file:./build/index.js",
+    "render": "file:./render.php"
+  }
+  

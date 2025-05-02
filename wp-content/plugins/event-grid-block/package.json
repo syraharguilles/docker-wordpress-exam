@@ -1,0 +1,18 @@
+{
+    "name": "event-grid-block",
+    "version": "1.0.0",
+    "description": "Custom Gutenberg block that displays a grid of events.",
+    "author": "Syrah Arguilles",
+    "scripts": {
+        "build": "wp-scripts build",
+        "start": "wp-scripts start"
+    },
+    "devDependencies": {
+        "@wordpress/scripts": "^27.0.0"
+    },
+    "license": "GPL-2.0-or-later",
+    "dependencies": {
+        "@wordpress/core-data": "^7.22.0",
+        "@wordpress/data": "^10.22.0"
+    }
+}
