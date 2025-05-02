@@ -1,0 +1,18 @@
+# Node.js
+node_modules/
+dist/
+.vite/
+.cache/
+
+# Composer
+vendor/
+composer.lock
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+*.log
+
+# PHPStorm / VSCode
+.idea/
+.vscode/
