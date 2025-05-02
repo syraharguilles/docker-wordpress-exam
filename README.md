@@ -96,6 +96,6 @@ npm run watch:all
  - Tailwind CSS is configured through PostCSS
  - Block JS uses React + WordPress block APIs
  - functions.php handles:
-  - CPT and taxonomy registration
-  - Block registration
-  - Settings page setup
+    - CPT and taxonomy registration
+    - Block registration
+    - Settings page setup
