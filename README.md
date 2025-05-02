@@ -58,6 +58,27 @@ clone https://github.com/syraharguilles/docker-wordpress-exam.git
 # Start WordPress + DB
 docker compose up -d
 ```
+
+- This starts:
+  - wordpress on `http://localhost:8000`
+  - phpMyAdmin on `http://localhost:8080`
+
+#### GitHub Actions CI/CD
+This project includes a GitHub Actions workflow that:
+ - Uploads the repo to a remote server via SCP
+ - Runs docker compose up -d on the server to restart the stack
+
+CI Setup Steps
+1. Add your private deployment server SSH details to GitHub secrets:
+ - SSH_HOST
+ - SSH_USER
+ - SSH_KEY (private key)
+2. On your server:
+ - Add your public SSH key to ~/.ssh/authorized_keys
+ - Make sure Docker + Docker Compose are installed
+3. Push to main and the deployment will trigger automatically.
+ - Workflow file: .github/workflows/deploy.yml
+
 ### 2. Install Dependencies
 ####  Install Theme
 From the theme directory:
