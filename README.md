@@ -88,7 +88,7 @@ npm run watch:all
 ## **Event Grid Block (plugin)**
  - Plugin: plugins/event-grid-block
  - Accepts props (limit, category, order, etc.)
- - Built via Vite and rendered server-side
+ - Built using @wordpress/scripts
 
 ## **Architectural Notes**
  - Vite used for bundling theme assets
