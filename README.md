@@ -145,7 +145,7 @@ npm run start
  - Vite used for bundling theme assets
    - It is easy to use and faster
  - Chokidar used for bundling theme assets
-   -Vite doesnt support watching js, css, php. Opt to use this instead. Fast and efficient.
+   - Vite doesnt support watching js, css, php. Opt to use this instead. Fast and efficient.
  - @wordpress/scripts used for block development
    - Default usage for gutenberg block
  - Tailwind CSS is configured through PostCSS
