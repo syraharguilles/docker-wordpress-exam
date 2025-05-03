@@ -122,21 +122,36 @@ npm run start
 
 ## **Gutenberg Blocks**
 - Hero CTA Block (in theme)
- - JSX source: blocks/hero-cta/src/
+ - Block: blocks/hero-cta/
+ - JS source: blocks/hero-cta/src/
  - PHP render: blocks/hero-cta/render.php
  - Registered via block.json
+ - Accept props (image, header text, button text, link)
  - Built using @wordpress/scripts
+ - It is decided to create in theme due these reason:
+  - Tightly coupled to theme layout. It should follow what is the theme layout and design  
 
 ## **Event Grid Block (plugin)**
  - Plugin: plugins/event-grid-block
- - Accepts props (limit, category, order, etc.)
+ - JS source: plugins/event-grid-block/src/
+ - PHP render: plugins/event-grid-block/php/render.php
+ - Registered via block.json
+ - Accepts props (limit, category, order)
  - Built using @wordpress/scripts
+ - It is decided to create in plugin due these reason:
+  - It could reused to the other themes
 
 ## **Architectural Notes**
  - Vite used for bundling theme assets
+   - It is easy to use and faster
+ - Chokidar used for bundling theme assets
+   - Watcher for js, css, php. Fast and efficient.
  - @wordpress/scripts used for block development
+   - Default usage for gutenberg block
  - Tailwind CSS is configured through PostCSS
+   - Requirements
  - Block JS uses React + WordPress block APIs
+   - Requirements 
  - functions.php handles:
     - CPT and taxonomy registration
     - Block registration
