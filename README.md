@@ -10,7 +10,7 @@ A modern WordPress project using Tailwind CSS v4, custom Gutenberg blocks, and d
 - Custom Post Type: `event`
 - Custom Taxonomy: `event-category`
 - Custom REST API: `/wp-json/proevent/v1/next?category=[category-name]`
-- Custom meta fields: date, time, location, registration link
+- Custom meta fields: date, time, location, registration link, image, text, cta link
 - Admin Settings page: company logo, brand color, social links
 - SEO-friendly slugs: `/events`, `/event-category/...`
 - WebP + lazy loading support for images
@@ -129,7 +129,7 @@ npm run start
  - Accept props (image, header text, button text, link)
  - Built using @wordpress/scripts
  - It is decided to create in theme due these reason:
-  - Tightly coupled to theme layout. It should follow what is the theme layout and design  
+    - Tightly coupled to theme layout. It should follow what is the theme layout and design  
 
 ## **Event Grid Block (plugin)**
  - Plugin: plugins/event-grid-block
@@ -139,13 +139,13 @@ npm run start
  - Accepts props (limit, category, order)
  - Built using @wordpress/scripts
  - It is decided to create in plugin due these reason:
-  - It could reused to the other themes
+    - It could reused to the other themes
 
 ## **Architectural Notes**
  - Vite used for bundling theme assets
    - It is easy to use and faster
  - Chokidar used for bundling theme assets
-   - Watcher for js, css, php. Fast and efficient.
+   -Vite doesnt support watching js, css, php. Opt to use this instead. Fast and efficient.
  - @wordpress/scripts used for block development
    - Default usage for gutenberg block
  - Tailwind CSS is configured through PostCSS
